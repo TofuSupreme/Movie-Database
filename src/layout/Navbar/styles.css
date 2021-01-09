@@ -1,0 +1,36 @@
+.navbar {
+  height: 70px;
+  background-color: #ddd;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 60px;
+}
+
+.navbar-left {
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo {
+  padding-right: 25px;
+}
+
+.navbar-nav {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar-nav li {
+  margin-left: 20px;
+}
+
+.navbar-secnav {
+  display: flex;
+}
+
+.navbar-secnav div {
+  margin-right: 20px;
+}
