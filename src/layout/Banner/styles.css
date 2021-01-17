@@ -1,30 +1,64 @@
 .banner {
-  background-image: url("https://image.tmdb.org/t/p/original//vNEXeurfoBXkaRJTRSlNUdMzIxJ.jpg");
-  height: 500px;
-  display: flex;
- 
+	display: block;
+	z-index: 1;
+	position: relative;
 }
-.text-title {
-	 top: 0;
-	 bottom: 35%;
-	 left: 14%;
-	 width: 36%;
-	 z-index: 10;
+
+.banner-img {
+  /*background-image: url("https://image.tmdb.org/t/p/original//vNEXeurfoBXkaRJTRSlNUdMzIxJ.jpg");*/
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 56.25vw;
+  /*display: flex;*/
+  z-index: 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.banner-vignette {
+	position: absolute;
+	background-image:
+        linear-gradient(to bottom,
+            rgba(20,20,20,0) 0,
+            rgba(20,20,20,.15) 15%,
+            rgba(20,20,20,.35) 29%,
+            rgba(20,20,20,.58) 44%,
+            #141414 90%,
+            #141414 100%
+        );
+    height: 100%;
+    width: 100%;
+}
+
+.banner-description {
+	position: absolute;
+	bottom: 35%;
+	left: 14%;
+	width: 36%;
+	color: #E5E5E5;
 	line-height: 1.2;
 	cursor: default;
 	min-height: 13.2vw;
-	margin-bottom: 1.2vw;
-	margin-left: 1.4vw;
+}
 
-	}
+.banner-title {
+	font-size: 56px;
+	margin: 0;
+}
 	
 
-.message {
-	font-size: 14px;
-	display: flex;
-	align-items: center;
+.banner-message {
+	font-size: 30px;
+	margin: 25px 0;
 	font-weight: 700;
-	
+}
+
+.banner-synopsis {
+	font-size: 24px;
 }
 
 button {
@@ -47,3 +81,4 @@ button {
 button:hover {
 	opacity: 1;
 }
+
