@@ -33,4 +33,6 @@
 
 .navbar-secnav div {
   margin-right: 20px;
+  cursor: pointer;
 }
+

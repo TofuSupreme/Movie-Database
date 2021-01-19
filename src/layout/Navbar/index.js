@@ -1,4 +1,10 @@
-import "./styles.css"
+import './styles.css'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+import { faGift } from '@fortawesome/free-solid-svg-icons'
+import { faBell } from '@fortawesome/free-solid-svg-icons'
+import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
+
 
 function NavBar() {
   return (
@@ -35,7 +41,7 @@ function NavBar() {
 
         <div className="navbar-secnav">
             <div>
-                Search
+                 <FontAwesomeIcon icon={faSearch}/>
             </div>
             
             <div>
@@ -47,15 +53,16 @@ function NavBar() {
             </div>
             
             <div>
-                Gift Icon
+                <FontAwesomeIcon icon={faGift}/>
             </div>
             
             <div>
-                Notification Icon
+               <FontAwesomeIcon icon={faBell}/>
             </div>
             
             <div>
-                Profile
+                <FontAwesomeIcon icon={faUserCircle} style={{width:25, height: 25}}/>
+    
             </div>
         </div>
     </div>

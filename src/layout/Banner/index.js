@@ -6,6 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
 import {faInfoCircle} from '@fortawesome/free-solid-svg-icons'
 
+
 const base_poster_url = 'https://image.tmdb.org/t/p/original/'
 
 function Banner() {
@@ -59,7 +60,7 @@ function Banner() {
                         <FontAwesomeIcon icon={faPlay}/> Play
         	        </button>
         	    
-                    <button className="play-button"> 
+                    <button className="info-button"> 
                         <FontAwesomeIcon icon={faInfoCircle}/> More Info
                     </button>
                 </div>
