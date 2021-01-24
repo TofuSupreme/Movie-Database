@@ -1,3 +1,4 @@
+import './styles.css'
 import { useState, useEffect } from 'react'
 import Poster from '../Poster'
 import api from '../../api'
@@ -30,10 +31,9 @@ function Row({ title, url }) {
     
     return (
         <div className="row">
-            Here lies thine Row
             {/* rowArray.map() builds out the <Poster data={data} /> */}
             
-            <h2>{title}</h2>
+            <h2>Now Trending</h2>
             
             <div className="row-slider">
                 {

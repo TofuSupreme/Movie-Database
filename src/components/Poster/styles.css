@@ -1,0 +1,9 @@
+img {
+    padding: 5px;
+    width: 400px;
+    height: 255px;
+    transition: transform 500ms; ;
+}
+img:hover {
+    transform: scale(1.2);
+}

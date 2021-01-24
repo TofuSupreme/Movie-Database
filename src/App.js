@@ -1,8 +1,9 @@
-import './App.css';
+import './index.css';
 import Banner from './layout/Banner'
 import NavBar from './layout/Navbar'
 import Row from './components/Row'
 import api from './api'
+
 
 function App() {
   return (
@@ -14,8 +15,7 @@ function App() {
         <Banner />
         
         {/* Category Rows */}
-        <Row title="Trending Now" url={api.getNetflixOriginals} />
-        
+        <Row url={api.getNetflixOriginals} />
         {/* Footer */}
     </div>
   );

@@ -1,7 +1,8 @@
 .banner {
 	display: block;
-	z-index: 1;
 	position: relative;
+	height: 100vh;
+	z-index: 10;
 }
 
 .banner-img {
@@ -12,15 +13,19 @@
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 56.25vw;
-  /*display: flex;*/
-  z-index: 0;
+  height: 70.25vw;
+  z-index: -10;
   background-size: cover;
   background-position: center;
 }
 
 .banner-vignette {
 	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	height: 70.25vw;
 	background-image:
         linear-gradient(to bottom,
             rgba(20,20,20,0) 0,
@@ -30,8 +35,6 @@
             #141414 90%,
             #141414 100%
         );
-    height: 100%;
-    width: 100%;
 }
 
 .banner-description {
@@ -42,7 +45,7 @@
 	color: #E5E5E5;
 	line-height: 1.2;
 	cursor: default;
-	min-height: 13.2vw;
+	min-height: 15.2vw;
 }
 
 .banner-title {
