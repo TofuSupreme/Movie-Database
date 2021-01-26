@@ -6,7 +6,7 @@ const base_poster_url = "https://image.tmdb.org/t/p/original"
 
 function Poster({ title, url }) {
     return (
-        <div className="poste">
+        <div className="poster">
             <img src={base_poster_url + url} />
 
             <div className="poster-description">
