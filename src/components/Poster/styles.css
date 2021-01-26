@@ -1,9 +1,23 @@
+.poster {
+    position: relative;
+    max-height: 255px;
+}
+
 img {
     padding: 5px;
-    width: 400px;
-    height: 255px;
-    transition: transform 500ms; ;
+    max-height: 255px;
+    transition: transform 500ms; 
+    object-fit: contain;
 }
+
 img:hover {
     transform: scale(1.2);
+}
+
+.poster-description {
+    color: white;
+    position: absolute;
+    bottom: 10px;
+    height: 100%;
+    width: 100%; 
 }
