@@ -1,13 +1,45 @@
+import './styles.css'
+import { useState, useEffect } from 'react'
 import Poster from '../Poster'
-import { useState } from 'react'
+import Axios from '../../Axios'
 
-function Row() {
-    //use a map function with state to try and loop through the array 
-    return  (
-        <div>
+function Row({ title, url, isPoster = false }) {
+    // Stores the list of Posters
+    const [topRated, setTopRated] = useState([])
+    
+    useEffect(() => {
+        async function getTopRated() {
+            try {
+                //get a list of top rated movies
+                const response = await Axios.get(url)
+
+                //state-ify the movie
+                setTopRated(response.data.results)
+            } catch (err) {
+                console.error(err)
+            }
+        }
         
-            Here lies thine Row
+        getTopRated()
+    }, [])
+    
+    return (
+        <div className="row">
+ 
             {/* rowArray.map() builds out the <Poster data={data} /> */}
+            
+            <h2>{title}</h2>
+            
+            <div className="row-slider">
+                {
+                    topRated.map(poster =>
+                        <Poster 
+                            key={poster.id} 
+                            url={isPoster ? poster.poster_path : poster.backdrop_path} 
+                            title={poster.name} />
+                    )
+                }
+            </div>
         </div>
     )
 } 
