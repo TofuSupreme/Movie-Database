@@ -9,6 +9,7 @@ const api = {
     getHorrorMovies: '/discover/movie?with_genres=27',
     getRomanceMovies: '/discover/movie?with_genres=10749',
     getTVByID: '/tv/',
+    getMovieByID: '/movie/'
 }
 
 export default api

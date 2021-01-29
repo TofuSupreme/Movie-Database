@@ -25,6 +25,7 @@ function Row({ title, url, isPoster = false }) {
     
     return (
         <div className="row">
+ 
             {/* rowArray.map() builds out the <Poster data={data} /> */}
             
             <h2>{title}</h2>

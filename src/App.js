@@ -4,7 +4,6 @@ import NavBar from './layout/Navbar'
 import Row from './components/Row'
 import api from './api'
 
-
 function App() {
   return (
     <div className="App">
