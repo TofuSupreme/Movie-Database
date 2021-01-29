@@ -21,7 +21,7 @@ function Row({ title, url, isPoster = false }) {
         }
         
         getTopRated()
-    }, [])
+    }, [url]) 
     
     return (
         <div className="row">
