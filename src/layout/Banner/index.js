@@ -42,8 +42,6 @@ function Banner() {
         return str?.length > charLen ? str.substr(0, charLen - 1) + '...' : str
     }
     
-    console.log(movie)
-    
     return (
         <div className="banner">
             <div className="banner-img" style={{backgroundImage: `url(${base_poster_url + movie.backdrop_path})`}}>

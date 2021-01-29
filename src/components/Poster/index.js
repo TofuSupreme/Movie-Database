@@ -1,13 +1,11 @@
 import './styles.css'
-import api from '../../api'
-import Axios from '../../Axios'
-import { useState, useEffect } from 'react'
+
 const base_poster_url = "https://image.tmdb.org/t/p/original"
 
 function Poster({ title, url }) {
     return (
         <div className="poster">
-            <img src={base_poster_url + url} />
+            <img src={base_poster_url + url} alt={title} />
 
             <div className="poster-description">
                 {title}

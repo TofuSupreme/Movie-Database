@@ -12,9 +12,7 @@ function Row({ title, url, isPoster = false }) {
             try {
                 //get a list of top rated movies
                 const response = await Axios.get(url)
-                
-                // console.log(response.data.results)
-            
+
                 //state-ify the movie
                 setTopRated(response.data.results)
             } catch (err) {
@@ -24,9 +22,6 @@ function Row({ title, url, isPoster = false }) {
         
         getTopRated()
     }, [])
-    
-    //For some strange reason, NOW console.log works 
-    console.log(topRated)
     
     return (
         <div className="row">
