@@ -10,14 +10,29 @@ img {
     object-fit: contain;
 }
 
-img:hover {
+.poster:hover .overlay{
+    opacity: 1;
     transform: scale(1.2);
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: .5s ease;
+    background-color:rgb(20, 20, 20, 1);
 }
 
 .poster-description {
     color: white;
-    position: absolute;
-    bottom: 10px;
-    height: 100%;
-    width: 100%; 
+    position: relative;
+    font-size: 1.5rem;
+    text-align: center;
+    top: 50%
+   
 }

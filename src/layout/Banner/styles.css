@@ -49,19 +49,19 @@
 }
 
 .banner-title {
-	font-size: 56px;
+	font-size: 5.6rem;
 	margin: 0;
 }
 	
 
 .banner-message {
-	font-size: 30px;
+	font-size: 3rem;
 	margin: 25px 0;
 	font-weight: 700;
 }
 
 .banner-synopsis {
-	font-size: 24px;
+	font-size: 2.4rem;
 }
 
 button {
