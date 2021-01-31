@@ -6,9 +6,10 @@ function Poster({ title, url }) {
     return (
         <div className="poster">
             <img src={base_poster_url + url} alt={title} />
-
+            <div className="overlay">
             <div className="poster-description">
                 {title}
+                </div>
             </div>
         </div>
     )
