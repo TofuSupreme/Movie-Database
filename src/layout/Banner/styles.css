@@ -1,19 +1,18 @@
 .banner {
 	display: block;
-	position: relative;
-	height: 100vh;
 	z-index: 10;
+	margin-bottom: 20px;
+	padding-bottom: 40%;
 }
 
 .banner-img {
-  /*background-image: url("https://image.tmdb.org/t/p/original//vNEXeurfoBXkaRJTRSlNUdMzIxJ.jpg");*/
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
   width: 100%;
-  height: 70.25vw;
+  height: 56.25vw;
   z-index: -10;
   background-size: cover;
   background-position: center;
@@ -25,7 +24,7 @@
 	left: 0;
 	right: 0;
 	bottom: 0;
-	height: 70.25vw;
+	height: 56.25vw;
 	background-image:
         linear-gradient(to bottom,
             rgba(20,20,20,0) 0,
@@ -40,7 +39,7 @@
 .banner-description {
 	position: absolute;
 	bottom: 35%;
-	left: 14%;
+	left: var(--edge-space);
 	width: 36%;
 	color: #E5E5E5;
 	line-height: 1.2;
@@ -78,8 +77,6 @@ button {
 a
 .watch-button {
 	background-color: rgba(255, 255, 255, 1);
-
-	
 }
 
 .watch-button:hover {
@@ -89,6 +86,7 @@ a
 .info-button {
 	background-color: rgba(109, 109, 110, 0.7);
 	margin-left: 15px;
+	color: white;
 }
 
 .info-button:hover {

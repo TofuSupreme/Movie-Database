@@ -1,12 +1,13 @@
-h2{
-    font-size: 4.5rem;
-    color: #E5E5E5;
-}
-
 .row{
     position: relative;
     z-index: 10;
+    margin-left: var(--edge-space);
+    margin-bottom: var(--edge-space);
+}
 
+h2{
+    font-size: 4.5rem;
+    color: #E5E5E5;
 }
 
 .row-slider {
@@ -14,7 +15,6 @@ h2{
     display: flex;
     overflow-x: scroll;
     overflow-y: hidden;
-    padding: 20px;
     scrollbar-width: none;
     -ms-overflow-style: none; /* IE 11 */
 }

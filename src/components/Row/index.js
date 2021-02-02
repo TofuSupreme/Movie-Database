@@ -10,11 +10,17 @@ function Row({ title, url, isPoster = false }) {
     useEffect(() => {
         async function getTopRated() {
             try {
-                //get a list of top rated movies
-                const response = await Axios.get(url)
+                const data = localStorage.getItem(title)
+                if (data) {
+                    setTopRated(JSON.parse(data))
+                } else {
+                    //get a list of top rated movies
+                    const response = await Axios.get(url)
 
-                //state-ify the movie
-                setTopRated(response.data.results)
+                    localStorage.setItem(title, JSON.stringify(response.data.results))
+                    //state-ify the movie
+                    setTopRated(response.data.results)
+                }
             } catch (err) {
                 console.error(err)
             }
@@ -32,12 +38,17 @@ function Row({ title, url, isPoster = false }) {
             
             <div className="row-slider">
                 {
-                    topRated.map(poster =>
-                        <Poster 
+                    topRated.map(poster => {
+                        // If poster doesn't have an image or path don't display
+                        if (!poster.poster_path || !poster.backdrop_path) {
+                            return null
+                        }
+
+                        return <Poster 
                             key={poster.id} 
                             url={isPoster ? poster.poster_path : poster.backdrop_path} 
-                            title={poster.name} />
-                    )
+                            title={poster.name || poster.title} />
+                    })
                 }
             </div>
         </div>
