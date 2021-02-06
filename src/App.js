@@ -2,6 +2,7 @@ import './index.css';
 import Banner from './layout/Banner'
 import NavBar from './layout/Navbar'
 import Row from './components/Row'
+import Footer from './layout/Footer'
 import api from './api'
 
 function App() {
@@ -23,7 +24,7 @@ function App() {
         <Row title="Horror" url={api.getHorrorMovies} />
         {/* <Row title="Documentaries" url={api.getDocumentaries} /> */}
 
-        {/* Footer */}
+        <Footer />
     </div>
   );
 }
