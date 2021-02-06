@@ -5,7 +5,8 @@ import {
     faSearch, 
     faGift,
     faBell,
-    faUserCircle
+    faUserCircle,
+    faBars,
 } from '@fortawesome/free-solid-svg-icons'
 
 
@@ -23,7 +24,15 @@ function NavBar() {
   return (
     <div className={"navbar" + (BG ? " navbar-bg" : "")}> 
         <div className="navbar-left">
-            <div className="navbar-mobile-hamburger">X - show on mobile view</div>
+            <nav className="navbar-mobile-hamburger">
+                <div className="mobile-burger"> <FontAwesomeIcon icon={faBars}/>
+                    {/* <a href="#home">Home</a>
+                    <a href="#tv">TV Shows</a>
+                    <a href="#movies">Movies</a>
+                    <a href="#news">News & Popular</a>
+                    <a href="#mylist">My List</a> */}
+                </div>
+            </nav>
 
             <div className="navbar-logo" style={{height: "30px", width: "90px"}}>
                 <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%" viewBox="0 0 1024 276.742">
@@ -31,8 +40,16 @@ function NavBar() {
                 </svg>
             </div>
 
-            <div className="navbar-tablet-dropdown">Browse Dropdown goes here - show on tablet view</div>
-          
+            <div className="dropdown">
+                <button className="dropbtn">Browse</button>
+                    <div className="dropdown-content">
+                        <a href="#home">Home</a>
+                        <a href="#tv">TV Shows</a>
+                        <a href="#movies">Movies</a>
+                        <a href="#news">News & Popular</a>
+                        <a href="#mylist">My List</a>
+                    </div>
+                </div>
             <ul className="navbar-center">
                 <li>
                     <a href="#home">Home</a>
@@ -82,10 +99,22 @@ function NavBar() {
     
             </div>
         </div>
-
         <div className="navbar-mobile-right">
+            <div>
+                <FontAwesomeIcon icon={faGift}/>
+            </div>
+            
+            <div>
+               <FontAwesomeIcon icon={faBell}/>
+            </div>
+            
+            <div>
+                <FontAwesomeIcon icon={faUserCircle} style={{width:25, height: 25}}/>
+    
+            </div>
+{/*            
             search - show until desktop view
-            profile - hide on phone / show on tablet
+            profile - hide on phone / show on tablet */}
         </div>
     </div>
   )
