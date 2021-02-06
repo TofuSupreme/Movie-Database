@@ -1,21 +1,28 @@
 .poster {
     position: relative;
     max-height: 255px;
+    margin: 0 5px; 
+    transition: transform 500ms;
 }
 
 img {
-    padding: 5px;
     max-height: 255px;
     transition: transform 500ms; 
     object-fit: contain;
 }
 
-.poster:hover .overlay{
-    opacity: 1;
+.poster:hover {
     transform: scale(1.2);
+    z-index: 1;
+}
+
+.poster:hover .overlay,
+.poster:hover .poster-description {
+    display: block;
 }
 
 .overlay {
+    display: none;
     position: absolute;
     top: 0;
     bottom: 0;
@@ -23,16 +30,16 @@ img {
     right: 0;
     height: 100%;
     width: 100%;
-    opacity: 0;
-    transition: .5s ease;
-    background-color:rgb(20, 20, 20, 1);
+    background-color:rgb(20, 20, 20, 0.5);
 }
 
 .poster-description {
-    color: white;
-    position: relative;
-    font-size: 1.5rem;
+    display: none;
+    width: 100%;
+    position: absolute;
+    top: 50%;
     text-align: center;
-    top: 50%
+    font-size: 1.5rem;
+    color: white;
    
 }

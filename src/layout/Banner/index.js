@@ -44,25 +44,28 @@ function Banner() {
     
     return (
         <div className="banner">
-            <div className="banner-img" style={{backgroundImage: `url(${base_poster_url + movie.backdrop_path})`}}>
-                <div className="banner-vignette"></div>
-            
-                <div className="banner-description">
-                    <h2 className="banner-title">{movie.name}</h2>
+            { movie?.backdrop_path && 
+                <div className="banner-img" 
+                    style={{backgroundImage: `url(${base_poster_url + movie.backdrop_path})`}}>
+                    <div className="banner-vignette"></div>
                 
-                    <p className="banner-message">Watch Season {movie.number_of_seasons}</p>
+                    <div className="banner-description">
+                        <h2 className="banner-title">{movie.name}</h2>
                     
-                    <p className="banner-synopsis">{truncate(movie.overview, 150)}</p>
-                     
-                    <button className="watch-button">
-                        <FontAwesomeIcon icon={faPlay}/> Play
-        	        </button>
-        	    
-                    <button className="info-button"> 
-                        <FontAwesomeIcon icon={faInfoCircle}/> More Info
-                    </button>
+                        <p className="banner-message">Watch Season {movie.number_of_seasons}</p>
+                        
+                        <p className="banner-synopsis">{truncate(movie.overview, 150)}</p>
+                        
+                        <button className="watch-button">
+                            <FontAwesomeIcon icon={faPlay}/> Play
+                        </button>
+                    
+                        <button className="info-button"> 
+                            <FontAwesomeIcon icon={faInfoCircle}/> More Info
+                        </button>
+                    </div>
                 </div>
-            </div>
+            }
         </div>
     )
 }

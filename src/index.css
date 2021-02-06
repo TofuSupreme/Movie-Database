@@ -1,6 +1,6 @@
 :root {
   --bg-color-dark: rgb(20, 20, 20, 1);
-  --bg-color-light: #fff;
+  --edge-space: 60px;
 }
 
 html {

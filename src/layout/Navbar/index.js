@@ -1,14 +1,27 @@
+import { useEffect, useState } from 'react'
 import './styles.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faSearch } from '@fortawesome/free-solid-svg-icons'
-import { faGift } from '@fortawesome/free-solid-svg-icons'
-import { faBell } from '@fortawesome/free-solid-svg-icons'
-import { faUserCircle } from '@fortawesome/free-solid-svg-icons'
+import { 
+    faSearch, 
+    faGift,
+    faBell,
+    faUserCircle
+} from '@fortawesome/free-solid-svg-icons'
 
 
 function NavBar() {
+    const [BG, setBG] = useState(false)
+
+    useEffect(() => {
+        window.addEventListener("scroll", () => 
+            window.scrollY > 100 ? setBG(true) : setBG(false))
+
+        return window.removeEventListener("scroll", () => 
+            window.scrollY > 100 ? setBG(true) : setBG(false))
+    }, [])
+
   return (
-    <div className="navbar">
+    <div className={"navbar" + (BG ? " navbar-bg" : "")}> 
         <div className="navbar-left">
             <div className="navbar-logo" style={{height: "30px", width: "90px"}}>
                 <svg xmlns="http://www.w3.org/2000/svg" height="100%" width="100%" viewBox="0 0 1024 276.742">
