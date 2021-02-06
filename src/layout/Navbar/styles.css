@@ -25,7 +25,7 @@
   padding-right: 25px;
 }
 
-.navbar-nav {
+.navbar-center {
   display: flex;
   list-style-type: none;
   margin: 0;
@@ -39,17 +39,25 @@ a {
 
 }
 
-.navbar-nav li {
+.navbar-center li {
   margin-left: 20px;
 }
 
-.navbar-secnav {
+.navbar-right {
   display: flex;
   margin-right: var(--edge-space);
+  align-items: center;
 }
 
-.navbar-secnav div {
+.navbar-right div {
   margin-right: 20px;
   cursor: pointer;
 }
 
+@media screen and (max-width: 961px) {
+  .navbar-center,
+  .navbar-right {
+    display: none;
+  }
+
+}

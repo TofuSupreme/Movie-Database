@@ -11,6 +11,7 @@ function Row({ title, url, isPoster = false }) {
         async function getTopRated() {
             try {
                 const data = localStorage.getItem(title)
+
                 if (data) {
                     setTopRated(JSON.parse(data))
                 } else {
@@ -27,7 +28,7 @@ function Row({ title, url, isPoster = false }) {
         }
         
         getTopRated()
-    }, [url]) 
+    }, [url, title]) 
     
     return (
         <div className="row">

@@ -1,0 +1,33 @@
+.footer {
+    color: white;
+    font-size: 1.3rem;
+    padding: 20px;
+    max-width: 980px;
+    margin: 0 auto;
+}
+
+.footer-links {
+    margin: 0 auto;
+}
+
+.footer-links ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+}
+
+.footer-links ul li {
+    flex: 0 0 25%;
+    margin-bottom: 16px;
+}
+
+.footer-copyright {
+    margin-top: 20px; 
+}
+@media screen and (max-width: 961px) {
+    
+    }
+  
