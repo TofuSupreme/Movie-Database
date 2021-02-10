@@ -6,7 +6,7 @@ function Footer (){
                     'Cookie Preferences', 'Corporate Information',
                     'Contact Us', 'Act of Specified Commerical Transactions']
 
-    const listLinks = linkNames.map((links) => <li>{links}</li>)
+    const listLinks = linkNames.map((link) => <li key={link}>{link}</li>)
 
     return (
         <footer className="footer">

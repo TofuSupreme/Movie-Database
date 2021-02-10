@@ -1,29 +1,3 @@
-/* mobile sizes with max-width of 600px*/
-@media screen and (max-width: 600px) {
-  .navbar-center a, 
-  .navbar-right div {
-    display: none;
-    width: 100%;
-  }
-
-}
-/* tablet sizes of up to 768px */
-@media screen and (max-width: 800px){
-  .navbar-center a,
-  .navbar-right div {
-    display: none;
-    width: 75%;
-  }
-}
-
-/*desktop sizes past 980 px */
-@media screen and (min-width: 980px){
-  .dropdown,
-  .navbar-mobile-right div {
-    display: none
-  }
-}
-
 .navbar {
   position: fixed;
   width: 100vw;
@@ -45,6 +19,23 @@
   display: flex;
   align-items: center;
   margin-left: var(--edge-space);
+}
+
+.navbar-mobile-hamburger {
+  margin-right: 20px;
+}
+
+#hamburger-slider {
+  display: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0; 
+  left: -100%;
+  background: black; 
+  height: 100vh;
+  width: 180px;
+  transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
 }
 
 .navbar-logo {
@@ -72,7 +63,7 @@ a {
 .navbar-right {
   display: flex;
   margin-right: var(--edge-space);
-  align-items: right;
+  align-items: center;
 }
 
 .navbar-right div {
@@ -87,6 +78,7 @@ a {
   font-size: 1.4rem;
   border: none;
 }
+
 .dropdown-content {
   display: none;
   position: absolute;
@@ -106,15 +98,45 @@ display: block;
 .dropdown-content a:hover {
   background-color: #ddd;
 }
+
 .dropdown:hover .dropdown-content {
   display: block
 }
+
 .navbar-mobile-right {
   display: flex;
   margin-right: var(--edge-space);
   align-items: center;
 }
+
 .navbar-mobile-right div {
   margin-right: 20px;
   cursor: pointer;
+}
+
+/* mobile sizes with max-width of 600px*/
+@media screen and (max-width: 600px) {
+  .navbar-center, 
+  .navbar-tablet-dropdown,
+  .navbar-right {
+    display: none;
+  }
+}
+
+/* tablet sizes of up to 768px */
+@media screen and (min-width: 601px) and (max-width: 979px) {
+  .navbar-mobile-hamburger,
+  .navbar-center,
+  .navbar-right {
+    display: none;
+  }
+}
+
+/*desktop sizes past 980 px */
+@media screen and (min-width: 980px) {
+  .navbar-mobile-hamburger,
+  .navbar-tablet-dropdown,
+  .navbar-mobile-right {
+    display: none
+  }
 }
