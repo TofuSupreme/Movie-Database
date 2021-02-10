@@ -39,12 +39,12 @@ function NavBar() {
                         display: 'block',
                         left: mobileNav && '0'
                     }}>
-                    <li onClick={toggleMobileNav}>X</li>
-                    <li><a href = "#home">Home</a></li>
-                    <li><a href="#tv">TV Shows</a></li>
-                    <li><a href="#movies">Movies</a></li>
-                    <li><a href="#news">News & Popular</a></li>
-                    <li><a href = "#mylist">My List</a></li>
+                    <li onClick={toggleMobileNav}><span className="nav-Esc">X</span></li>
+                    <li className="nav-mobile-links"><a href = "#home">Home</a></li>
+                    <li className="nav-mobile-links"><a href="#tv">TV Shows</a></li>
+                    <li className="nav-mobile-links"><a href="#movies">Movies</a></li>
+                    <li className="nav-mobile-links"><a href="#news">News & Popular</a></li>
+                    <li className="nav-mobile-links"><a href = "#mylist">My List</a></li>
                 </ul>
             </nav> 
             

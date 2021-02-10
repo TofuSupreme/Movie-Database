@@ -15,13 +15,13 @@ function App() {
         <Banner />
         
         {/* Category Rows */}
-        <Row title="Netflix Originals" url={api.getNetflixOriginals} isPoster/>
-        <Row title="New Releases" url={api.getNetflixLatest} />
-        <Row title="Trending Now" url={api.getTrending} />
-        <Row title="Action" url={api.getActionMovies} />
-        <Row title="Comedy" url={api.getComedyMovies} />
-        <Row title="Romance" url={api.getRomanceMovies} />
-        <Row title="Horror" url={api.getHorrorMovies} />
+        <Row className="title-rows" title="Netflix Originals" url={api.getNetflixOriginals} isPoster/>
+        <Row className="title-rows" title="New Releases" url={api.getNetflixLatest} />
+        <Row className="title-rows" title="Trending Now" url={api.getTrending} />
+        <Row className="title-rows" title="Action" url={api.getActionMovies} />
+        <Row className="title-rows" title="Comedy" url={api.getComedyMovies} />
+        <Row className="title-rows" title="Romance" url={api.getRomanceMovies} />
+        <Row className="title-rows" title="Horror" url={api.getHorrorMovies} />
         {/* <Row title="Documentaries" url={api.getDocumentaries} /> */}
 
         <Footer />

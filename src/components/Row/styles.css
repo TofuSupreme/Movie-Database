@@ -21,3 +21,10 @@ h2{
 .row-slider::-webkit-scrollbar {
     display: none;
 }
+
+@media screen and (min-width:350px) and (max-width: 600px) {
+    h2{
+        font-size: 2.4rem;
+    }
+        }
+    

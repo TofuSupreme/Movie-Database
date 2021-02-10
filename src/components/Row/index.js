@@ -45,7 +45,7 @@ function Row({ title, url, isPoster = false }) {
                             return null
                         }
 
-                        return <Poster 
+                        return <Poster className="poster-row"
                             key={poster.id} 
                             url={isPoster ? poster.poster_path : poster.backdrop_path} 
                             title={poster.name || poster.title} />
