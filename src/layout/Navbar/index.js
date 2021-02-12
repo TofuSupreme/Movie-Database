@@ -35,10 +35,7 @@ function NavBar() {
                 
                 <ul 
                     id="hamburger-slider" 
-                    style={{
-                        display: 'block',
-                        left: mobileNav && '0'
-                    }}>
+                    style={{ left: mobileNav && '0' }}>
                     <li onClick={toggleMobileNav}><span className="nav-Esc">X</span></li>
                     <li className="nav-mobile-links"><a href = "#home">Home</a></li>
                     <li className="nav-mobile-links"><a href="#tv">TV Shows</a></li>
