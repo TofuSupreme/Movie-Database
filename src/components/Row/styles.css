@@ -1,11 +1,11 @@
-.row{
+.row {
     position: relative;
     z-index: 10;
     margin-left: var(--edge-space);
     margin-bottom: var(--edge-space);
 }
 
-h2{
+h2 {
     font-size: 4.5rem;
     color: #E5E5E5;
     margin-right: 30px;
@@ -23,9 +23,12 @@ h2{
     display: none;
 }
 
-@media screen and (min-width:350px) and (max-width: 600px) {
-    h2{
+@media screen and (max-width: 600px) {
+    .row {
+        margin-left: 30px;
+    }
+
+    h2 {
         font-size: 2.4rem;
     }
-        }
-    
+}

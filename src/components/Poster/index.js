@@ -3,7 +3,7 @@ import './styles.css'
 const base_poster_url = "https://image.tmdb.org/t/p/original"
 
 function Poster({ title, url }) {
-    return (
+    return ( 
         <div className="poster">
             <img src={base_poster_url + url} alt={title} />
 
