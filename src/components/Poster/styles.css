@@ -6,7 +6,7 @@
     cursor: pointer;
 }
 
-img {
+.poster img {
     max-height: 255px;
     transition: transform 500ms; 
     object-fit: contain;
@@ -42,11 +42,15 @@ img {
     text-align: center;
     font-size: 1.5rem;
     color: white;
-   
 }
+
 @media screen and (max-width: 600px) {
-	.poster{
-        width: 375px;
-        
+	.poster,
+    .poster img {
+        max-width: 250px;
+    }
+
+    .portrait img {
+        max-width: 150px;
     }
 }

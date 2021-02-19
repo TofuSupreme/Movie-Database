@@ -16,9 +16,11 @@
     margin-bottom: 5px;
 
 }
+
 .social-icons:hover{
     cursor: pointer;
 }
+
 .footer-links {
     margin: 0 auto;
 }

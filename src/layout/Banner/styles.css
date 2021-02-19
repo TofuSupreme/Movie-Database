@@ -1,6 +1,7 @@
 .banner {
+	position: relative; 
 	display: block;
-	z-index: 10;
+	z-index: 0;
 	margin-bottom: 20px;
 	padding-bottom: 40%;
 }
@@ -10,7 +11,7 @@
 	top: 0;
 	left: 0;
 	right: 0;
-	bottom: 0;
+	bottom: 0; 
 	width: 100%;
 	height: 56.25vw;
 	z-index: -10;
@@ -34,6 +35,7 @@
             #141414 90%,
             #141414 100%
         );
+	z-index: -5;
 }
 
 .banner-description {
@@ -45,7 +47,7 @@
 	line-height: 1.2;
 	cursor: default;
 	min-height: 15.2vw;
-	z-index: 20;
+	z-index: 5;
 }
 
 .banner-title {
@@ -79,7 +81,7 @@ button {
 }
 
 .watch-button:hover {
-	background-color: rgba(255, 255, 255, 0.75)
+	background-color: rgba(255, 255, 255, 0.75);
 }
 
 .info-button {
@@ -89,7 +91,7 @@ button {
 }
 
 .info-button:hover {
-	background-color: rgba(109, 109, 110, 0.4)
+	background-color: rgba(109, 109, 110, 0.4);
 }
 
 /* mobile sizes with max-width of 600px*/

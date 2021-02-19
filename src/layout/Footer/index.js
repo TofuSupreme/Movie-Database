@@ -9,7 +9,7 @@ import { faFacebookSquare,
 
 
 function Footer () {
-    const [windowWidth, setWindowWidth] = useState(0)
+    const [windowWidth, setWindowWidth] = useState(window.innerWidth) 
 
     useLayoutEffect(() => {
         function updateWidth() {
