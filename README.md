@@ -28,7 +28,7 @@
 ## About The Project
 
 A movie and TV show webapp using The Movie Database (tMDB) API. This app is meant to imitate Netflix's layout and interface. While not necessarily one-to-one with Netflix, this was primarily a personal project for me (with the help of my mentor) to work on real life apps using various technologies I have become familiar with. 
-This project was suggested to me by my mentor who has guided me through my frontend developer journey. 
+This project was suggested to me by my mentor who has been a blessing and is continuing to help guide me throughout my frontend developer journey. 
 
 This app is for educational usage only. That being said, the primary function of this app is to use technologies such as React, HTML, and CSS to create a semi-static webpage. The webpage is dynamic in the sense that once the page is refreshed, the banner image (the movie with its information) changes. However, all links are not functional. 
 
