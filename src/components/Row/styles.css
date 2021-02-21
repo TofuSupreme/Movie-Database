@@ -1,13 +1,14 @@
-.row{
+.row {
     position: relative;
     z-index: 10;
     margin-left: var(--edge-space);
     margin-bottom: var(--edge-space);
 }
 
-h2{
+h2 {
     font-size: 4.5rem;
     color: #E5E5E5;
+    margin-right: 30px;
 }
 
 .row-slider {
@@ -21,3 +22,23 @@ h2{
 .row-slider::-webkit-scrollbar {
     display: none;
 }
+
+@media screen and (max-width: 600px) {
+    .row {
+        margin-left: 26px;
+    }
+
+    h2 {
+        font-size: 2.4rem;
+    }
+}
+
+@media screen and (min-width: 601px) and (max-width: 979px) {
+    .row{
+
+    }
+
+    h2 {
+        font-size: 3rem;
+    }
+  }

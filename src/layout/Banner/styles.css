@@ -1,21 +1,22 @@
 .banner {
+	position: relative; 
 	display: block;
-	z-index: 10;
+	z-index: 0;
 	margin-bottom: 20px;
 	padding-bottom: 40%;
 }
 
 .banner-img {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  width: 100%;
-  height: 56.25vw;
-  z-index: -10;
-  background-size: cover;
-  background-position: center;
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0; 
+	width: 100%;
+	height: 56.25vw;
+	z-index: -10;
+	background-size: cover;
+	background-position: center;
 }
 
 .banner-vignette {
@@ -34,6 +35,7 @@
             #141414 90%,
             #141414 100%
         );
+	z-index: -5;
 }
 
 .banner-description {
@@ -45,13 +47,13 @@
 	line-height: 1.2;
 	cursor: default;
 	min-height: 15.2vw;
+	z-index: 5;
 }
 
 .banner-title {
 	font-size: 4.8rem;
 	margin: 0;
 }
-	
 
 .banner-message {
 	font-size: 3rem;
@@ -66,7 +68,6 @@
 button {
 	color: black;
 	border: none;
-	border-radius: 5px;
 	padding: 13px 40px;
 	text-align: center;
 	display: inline-block;
@@ -75,13 +76,12 @@ button {
 	opacity: 0.8;
 }
 
-a
 .watch-button {
 	background-color: rgba(255, 255, 255, 1);
 }
 
 .watch-button:hover {
-	background-color: rgba(255, 255, 255, 0.75)
+	background-color: rgba(255, 255, 255, 0.75);
 }
 
 .info-button {
@@ -91,63 +91,76 @@ a
 }
 
 .info-button:hover {
-	background-color: rgba(109, 109, 110, 0.4)
+	background-color: rgba(109, 109, 110, 0.4);
 }
-
 
 /* mobile sizes with max-width of 600px*/
 @media screen and (max-width: 600px) {
-	.banner-description {
-        /* maybe try leaving position absolute */
-        position: static;
-        width: 80%;
-        margin: 60px auto 0 auto;
+	.banner {
+		min-height: 230px;
+		margin-bottom: 0;
+		padding-bottom: 0;
 	}
 
-  .banner-title {
-  	    font-size: 2rem;
-  }
+	.banner-img,
+	.banner-vignette {
+		min-height: 230px;
+		z-index: -5
+	}
 
-  .banner-message {
-  	font-size: 1.6rem;
-	margin: 5px 0;
-  }
+	.banner-description {
+		position: static; 
+		width: 80%;
+		margin: 100px 30px 0px 30px;
+	}
 
-  .banner-synopsis {
-  	display: none;
-  }
+	.banner-title {
+		font-size: 2rem;
+		margin-bottom: 10px;
+	}
 
-  .watch-button,
-  .info-button {
-	padding: 7px 15px;
-  }
+	.banner-message {
+		font-size: 1.6rem;
+		margin: 5px 0;
+		margin-bottom: 20px;
+	}
+
+	.banner-synopsis {
+		display: none;
+	}
+
+	.watch-button,
+	.info-button {
+		padding: 7px 15px;
+	}
 }
 
 /* tablet sizes of up to 768px */
 @media screen and (min-width: 601px) and (max-width: 979px) {
-  /* .banner {
-	position: relative;
-	width: 50%;
-  } */
-
+	/* spotlight gradient as background */
   /* background-image: url(https://assets.nflxext.com/ffe/siteui/akira/fallback/spotlight_gradient.png); */
 
-  .banner-title {
-  	font-size: 3.6rem;
-  }
+	.banner-title {
+		font-size: 3.2rem;
+		margin-top: 30px;
+	}
 
-  .banner-message {
-  	font-size: 2rem;
-  }
+	.banner-description {
+		width: 50%;
+	}
 
-  .banner-synopsis {
-  	display: none;
-  }
+	.banner-message {
+		font-size: 2rem;
+	}
 
-  .watch-button,
-  .info-button {
-	padding: 10px 20px;
-  }
+	.banner-synopsis {
+		display: none;
+	}
+
+	.watch-button,
+	.info-button {
+		padding: 10px 20px;
+	}
 }
 
 /*desktop sizes past 980 px */
