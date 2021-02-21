@@ -41,12 +41,9 @@ This app is for educational usage only. That being said, the primary function of
 * [Axios](https://www.npmjs.com/package/axios)
 
 
-
-
 <!-- GETTING STARTED -->
 ## Getting Started
 
-This is an example of how you may give instructions on setting up your project locally.
 To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
