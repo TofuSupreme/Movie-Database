@@ -34,10 +34,6 @@ h2 {
 }
 
 @media screen and (min-width: 601px) and (max-width: 979px) {
-    .row{
-
-    }
-
     h2 {
         font-size: 3rem;
     }

@@ -137,8 +137,6 @@ button {
 
 /* tablet sizes of up to 768px */
 @media screen and (min-width: 601px) and (max-width: 979px) {
-	/* spotlight gradient as background */
-  /* background-image: url(https://assets.nflxext.com/ffe/siteui/akira/fallback/spotlight_gradient.png); */
 
 	.banner-title {
 		font-size: 3.2rem;
@@ -147,6 +145,8 @@ button {
 
 	.banner-description {
 		width: 50%;
+		position: static;
+		margin: 100px 30px 0px 60px;
 	}
 
 	.banner-message {
@@ -176,8 +176,4 @@ button {
 	.banner-synopsis {
 		font-size: 1.6rem;
 	}
-}
-
-@media screen and (min-width: 1200px) {
-
 }
