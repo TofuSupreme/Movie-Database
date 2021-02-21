@@ -6,35 +6,29 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlay } from '@fortawesome/free-solid-svg-icons'
 import {faInfoCircle} from '@fortawesome/free-solid-svg-icons'
 
-
 const base_poster_url = 'https://image.tmdb.org/t/p/original/'
 
 function Banner() {
   
     const [movie, setMovie] = useState({})
     
-   
-    useEffect(() => {
+     useEffect(() => {
         async function getRandomPoster() {
             try {
                
                 const response = await Axios.get(api.getNetflixOriginals)
                 
-             
                 const randomNumber = Math.floor(Math.random() * (response.data.results.length - 0 + 1)) + 0
                 const tvShow = response.data.results[randomNumber]
                 
-            
                 const movieDetails = await Axios.get(api.getTVByID + tvShow.id)
                 
-               
-                setMovie(movieDetails.data)
+               setMovie(movieDetails.data)
             } catch(err) {
                 console.error(err)
             }
         }
         
-      
         getRandomPoster()
     }, [])
     
