@@ -10,31 +10,31 @@ import {faInfoCircle} from '@fortawesome/free-solid-svg-icons'
 const base_poster_url = 'https://image.tmdb.org/t/p/original/'
 
 function Banner() {
-    //  useState: a place to store movie
+  
     const [movie, setMovie] = useState({})
     
-    // useEffect: makes the API call
+   
     useEffect(() => {
         async function getRandomPoster() {
             try {
-                // get list of popular netflix originals (tv shows)
+               
                 const response = await Axios.get(api.getNetflixOriginals)
                 
-                // select a tv show at random
+             
                 const randomNumber = Math.floor(Math.random() * (response.data.results.length - 0 + 1)) + 0
                 const tvShow = response.data.results[randomNumber]
                 
-                // get all the tv show's details
+            
                 const movieDetails = await Axios.get(api.getTVByID + tvShow.id)
                 
-                // state-ify the movie
+               
                 setMovie(movieDetails.data)
             } catch(err) {
                 console.error(err)
             }
         }
         
-        // calls the get Random Poster function
+      
         getRandomPoster()
     }, [])
     
