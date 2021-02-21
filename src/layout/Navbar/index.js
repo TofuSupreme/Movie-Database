@@ -6,6 +6,7 @@ import {
     faGift,
     faBell,
     faUserCircle,
+    faCaretDown,
     faBars,
 } from '@fortawesome/free-solid-svg-icons'
 
@@ -57,8 +58,9 @@ function NavBar() {
                     className="dropbtn" 
                     onClick={toggleTabletDropdown}
                     style={{ color: tabletDropdown && 'red' }}>Browse
-                    </button> 
-                
+                    <FontAwesomeIcon className="down-arrow" icon={faCaretDown}/>
+                </button> 
+                    
                 <div 
                     className="dropdown-content" 
                     style={{ display: tabletDropdown && 'block' }}>

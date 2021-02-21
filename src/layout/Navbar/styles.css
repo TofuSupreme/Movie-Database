@@ -97,13 +97,17 @@ a {
 }
 
 .dropbtn {
+  display:flex;
+  align-items: flex-end;
   background-color: transparent;
   color: white;
   padding: 16px;
   font-size: 1.4rem;
   border: none;
 }
-
+.down-arrow{
+  padding-left: 3px;
+}
 .dropdown-content {
   display: none;
   position: absolute;
@@ -155,9 +159,6 @@ a {
     margin-right: 35px;
   }
 
-  /*.navbar-mobile-right:last-child {*/
-  /*  margin-right: 0;*/
-  /*}*/
 }
 
 /* tablet sizes of up to 768px */

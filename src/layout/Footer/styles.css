@@ -27,12 +27,13 @@
  
 .footer-links-desktop,
 .footer-links-mobile {
-    margin: 10px;
+    margin: auto;
     padding: 0;
     list-style-type: none;
     display: flex;
     flex-wrap: wrap;
     cursor: pointer;
+    
 }
 
 .footer-links-desktop li,
@@ -53,6 +54,11 @@
 
     .footer-links-mobile li {
         flex: 0 0 50%;
+        
+    }
+
+    .footer-copyright {
+        margin: 20px 0 0 22px; 
     }
 }
 
@@ -62,7 +68,10 @@
         display: none;
     }
     .footer-links {
-    margin: 0px 30px 0px 30px;
+        margin: 0px 30px 0px 36px;
+    }
+    .footer-copyright {
+        margin-left: 36px;
     }
 }
 
