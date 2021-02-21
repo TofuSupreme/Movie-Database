@@ -21,6 +21,48 @@
   margin-left: var(--edge-space);
 }
 
+.navbar-mobile-hamburger {
+  margin-right: 20px;
+}
+
+.navbar-mobile-hamburger:hover{
+  cursor: pointer;
+}
+
+#hamburger-slider {
+  margin: 0;
+  padding-left: 30px;
+  position: absolute;
+  top: 0; 
+  left: -100%;
+  background: black; 
+  height: 100vh;
+  width: 180px;
+  transition: left 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+  list-style-type: none;
+}
+
+#hamburger-slider li:first-child {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  
+}
+
+#hamburger-slider li {
+  margin-bottom: 10px;
+}
+/* Need to figure out how to create a hover effect that highlights entire row */
+#hamburger-slider li a:hover {
+  background-color: #141414;
+  
+}
+
+.nav-esc {
+  padding: 20px;
+}
+
 .navbar-logo {
   padding-right: 25px;
 }
@@ -54,10 +96,85 @@ a {
   cursor: pointer;
 }
 
-@media screen and (max-width: 961px) {
-  .navbar-center,
+.dropbtn {
+  display:flex;
+  align-items: flex-end;
+  background-color: transparent;
+  color: white;
+  padding: 16px;
+  font-size: 1.4rem;
+  border: none;
+}
+.down-arrow{
+  padding-left: 5px;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color:black;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: white;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {
+  background-color: #3D3A3A;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block
+}
+
+.navbar-mobile-right {
+  display: flex;
+  margin-right: var(--edge-space);
+  align-items: center;
+}
+
+.navbar-mobile-right div {
+  margin-right: 20px;
+  cursor: pointer;
+}
+
+/* mobile sizes with max-width of 600px*/
+@media screen and (max-width: 600px) {
+  .navbar-center, 
+  .navbar-tablet-dropdown,
   .navbar-right {
     display: none;
   }
 
+  .navbar-left {
+    margin-left: 30px;
+  }
+
+  .navbar-mobile-right {
+    margin-right: 35px;
+  }
+
+}
+
+/* tablet sizes of up to 768px */
+@media screen and (min-width: 601px) and (max-width: 979px) {
+  .navbar-mobile-hamburger,
+  .navbar-center,
+  .navbar-right {
+    display: none;
+  }
+}
+
+/*desktop sizes past 980 px */
+@media screen and (min-width: 980px) {
+  .navbar-mobile-hamburger,
+  .navbar-tablet-dropdown,
+  .navbar-mobile-right {
+    display: none
+  }
 }
