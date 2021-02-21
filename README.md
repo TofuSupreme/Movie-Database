@@ -38,8 +38,8 @@ This app is for educational usage only. That being said, the primary function of
 This section should list any major frameworks that you built your project using. Leave any add-ons/plugins for the acknowledgements section. Here are a few examples.
 * [React](https://reactjs.org/)
 * [The Movie Database](https://www.themoviedb.org/)
-* [Font Awesome] (https://www.themoviedb.org/)
-* [Axios] (https://www.npmjs.com/package/axios)
+* [Font Awesome](https://www.themoviedb.org/)
+* [Axios](https://www.npmjs.com/package/axios)
 
 
 
