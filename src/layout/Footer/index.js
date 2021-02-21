@@ -35,7 +35,7 @@ function Footer () {
     return (
         <footer className="footer">
             <section className="footer-social">
-                {/* add social icons */}
+              
                 <div className='social-icons'>
                     <FontAwesomeIcon style={{height: '30px', width: '30px'}} icon={faFacebookSquare}/> 
                 </div>
