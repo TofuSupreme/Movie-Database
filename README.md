@@ -1,4 +1,4 @@
-  <h3 align="center">Netflix Clone App project</h3>
+  <h3 align="center">Movie Database App project</h3>
 
 
 
