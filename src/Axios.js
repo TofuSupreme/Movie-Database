@@ -10,4 +10,8 @@ const defaultOptions = {
 
 const axiosInstance = axios.create(defaultOptions)
 
+function App() {
+    const { data, error } = useSWR('/api/data', defaultOptions)
+}
+
 export default axiosInstance
